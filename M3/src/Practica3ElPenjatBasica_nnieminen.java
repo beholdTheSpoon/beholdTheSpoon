@@ -4,7 +4,6 @@ public class Practica3ElPenjatBasica_nnieminen {
 
 	public static void main(String[] args) {
 		
-		//bro
 		Scanner scanner = new Scanner(System.in);
 	
 		String paraulaSecreta = "practicajava";
@@ -26,6 +25,7 @@ public class Practica3ElPenjatBasica_nnieminen {
 				if(paraulaSecreta.charAt(j) == r) {
 					paraulaJoc[j] = r;
 					ple[j] = true;
+					System.out.print(paraulaJoc[j] + " ");
 				}
 				
 				
