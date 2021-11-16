@@ -4,7 +4,7 @@ public class Practica3ElPenjatBasica_nnieminen {
 
 	public static void main(String[] args) {
 		
-		//github comment
+		//eclipse comment
 		Scanner scanner = new Scanner(System.in);
 	
 		String paraulaSecreta = "practicajava";
