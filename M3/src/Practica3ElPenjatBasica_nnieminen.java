@@ -58,7 +58,7 @@ public class Practica3ElPenjatBasica_nnieminen {
 				break;
 			}
 			
-			if(c == 0) {					//CONDICIO DE 
+			if(c == 0) {					//CONDICIO DE CONTINUACIO/PERDUA DE INTENTS: si no es troba cap caracter que coincideix amb la resposta es continua normalment, pero si es troba una coincidencia, s'incrementa intents perque el bucle continui mes.
 				System.out.println("Malament.");
 			} else if(c > 0) {
 				intents++;
