@@ -32,33 +32,33 @@ public class Practica3ElPenjatBasica_nnieminen {
 			
 			System.out.println();
 			String resposta = scanner.next();
-			char r = resposta.charAt(0);
+			char r = resposta.charAt(0);	//resposta del usuari es el primer caracter del String resposta
 			
 			for(int j = 0; j < paraulaJoc.length; j++) {
-				if(paraulaJoc[j] == '-') {
+				if(paraulaJoc[j] == '-') {		//si es troba una linia, s'incrementa el comptador de linies (cL)
 					cL++;
 				}
 				
 				if(paraulaSecreta.charAt(j) == r) {
-					paraulaJoc[j] = r;
+					paraulaJoc[j] = r;			//si el caracter de la paraulaSecreta a la posicio j es igual a la resposta del usuari, s'incrementa el comptador del caracter.
 					c++;
 				}
 			}
 			
-			if(i == intents-1) {
+			if(i == intents - 1) {			//CONDICIO DE PERDUA: i es igual a intents-1
 				perdut = true;
 				System.out.println("Has perdut.");
 				System.out.print("La paraula era: " + paraulaSecreta);
 				break;
 			} 
 			
-			if(cL == 1 && c>0) {
+			if(cL == 1 && c > 0) {			//CONDICIO DE GUANYAMENT: el comptador de linies es 1 (per que el bucle del comptador ve abans que lo del caracter), i el comptador de caracters es mes que 0.
 				System.out.println("Has guanyat!");
 				System.out.print("La paraula era: " + paraulaSecreta );
 				break;
 			}
 			
-			if(c == 0) {
+			if(c == 0) {					//CONDICIO DE 
 				System.out.println("Malament.");
 			} else if(c > 0) {
 				intents++;
