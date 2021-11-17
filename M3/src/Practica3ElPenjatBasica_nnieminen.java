@@ -5,7 +5,7 @@ public class Practica3ElPenjatBasica_nnieminen {
 	public static void main(String[] args) {
 		
 		Scanner scanner = new Scanner(System.in);
-	
+		//ungagugga
 		String paraulaSecreta = "practicajava";
 		char paraulaJoc[] = new char[paraulaSecreta.length()];
 		boolean ple[] = new boolean[paraulaSecreta.length()];
