@@ -6,26 +6,33 @@ public class Practica3ElPenjatBasicaVAmp1_nnieminen {
 		Scanner scanner = new Scanner(System.in);
 		String paraulaSecreta = "practicajava";
 		char paraulaJoc[] = new char[paraulaSecreta.length()];
-		char ninot[][] = new char[7][5];
-	
-		//fa pena fer-la tan manualment perque el ninot es una forma complicat.
-		int pal[][] = {		{0,1},
-							{0,2},
-							{0,3}};
 		
-		int cos[][] = {		{1,3},
-							{2,3},
-							{3,3}};
+		int intents = 10;	//es pot canviar intents i fer-la mes gran, la corda i la estructura es faran mes llargs.
 		
-		int esquerra[][] = {{3,2},
-							{4,2}};
+		char ninot[][] = new char[intents-3][5];
+		int pOriginC[][] = 	{{1},{3}};					//punt origen de la corda
+		char corda = '|';
+		int pOriginN[][] = {{intents-8},{intents-7}}; 	//punt origen del ninot
+		int cPal = 0;
+		int cCorda = 0;
 		
-		int dreta[][] = {	{4,4},
-							{3,4}};
+		
+		for(int i = 0; i<pOriginN.length; i++) {
+			for(int j = 0; j<pOriginN[i].length; j++) {
+				System.out.print(pOriginN[i][j]);
+			}
+		}
+		
+		int passosNinot[][] = {
+								{2+cCorda,3},
+								{3+cCorda,3},
+								{3+cCorda,4},
+								{3+cCorda,2},
+								{4+cCorda,2},
+								{4+cCorda,4}
+								};
 		
 		char parts[] = {'-','|','/','O','\\'};
-
-		//int cN = passos.length-(passos.length-1);
 		
 		for (int i = 0; i < ninot.length; i++) {
 			for (int j = 0; j < ninot[i].length; j++) {
@@ -43,8 +50,6 @@ public class Practica3ElPenjatBasicaVAmp1_nnieminen {
 		int c = 0;
 		int cL = 0;
 		
-		int intents = 10;
-
 		for(int i = 0; i < paraulaJoc.length; i++) {
 			paraulaJoc[i] = '-';
 		}
@@ -102,14 +107,16 @@ public class Practica3ElPenjatBasicaVAmp1_nnieminen {
 			
 			if(c == 0) {					//CONDICIO DE CONTINUACIO/PERDUA DE INTENTS: si no es troba cap caracter que coincideix amb la resposta es continua normalment, pero si es troba una coincidencia, s'incrementa intents perque el bucle continui mes.
 				System.out.println("Malament.");
-				for (int j = 0; j < cN; j++) {
-					for (int k = 0; k < passos[j].length; k++) {
-						if()
-								//ninot[j][k] = 
-					}
+				if(cPal!=3) {
+					ninot[0][cPal+1] = parts[0];
+					cPal++;
+				} else if(cPal == 3 && cCorda < intents-9) {				//es dibuixa el pal si el comptador no es 3, pero si es 3 es comença a dibuixar la corda.
+					ninot[pOriginC[0][0]+cCorda][pOriginC[1][0]] = corda;	//la llargada de la corda i de la estructura depen en el numero de intents.
+					cCorda++;
+				} else if(cPal == 3 && cCorda >= intents-9) {
+					//ninot[]
 				}
 				
-			cN++;
 			} else if(c > 0) {
 				intents++;
 			}
