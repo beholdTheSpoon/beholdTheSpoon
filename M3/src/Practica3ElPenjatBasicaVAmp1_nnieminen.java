@@ -83,14 +83,21 @@ public class Practica3ElPenjatBasicaVAmp1_nnieminen {
 			
 			System.out.println();
 			String resposta = scanner.next();
-			char r = resposta.charAt(0);									//resposta del usuari es el primer caracter del String resposta
+			char r = resposta.charAt(0);							//resposta del usuari es el primer caracter del String resposta
 			
+
 			for(int j = 0; j < paraulaJoc.length; j++) {
-				
 				if(r == '9') {
-					while(paraulaSecreta[j] != r) {
-						r = (char) ('a' + rand.nextInt(26));
-					}
+					r = (char) ('a' + rand.nextInt(26));
+					int l = 0;
+						do {
+							for(int k = 0; k < paraulaSecreta.length(); k++) {
+								if(paraulaJoc[k] == '-' || paraulaSecreta.charAt(k) == r) {
+									r = (char) ('a' + rand.nextInt(26));					
+								}
+								l=k;
+							}
+					} while(paraulaJoc[l] == '-' && r != paraulaSecreta.charAt(l));
 				}
 				
 				if(paraulaJoc[j] == '-') {									//si es troba una linia, s'incrementa el comptador de linies (cL)
@@ -102,9 +109,7 @@ public class Practica3ElPenjatBasicaVAmp1_nnieminen {
 					c++;
 				}
 			}
-			
-			
-			
+
 			if(i == intents - 1) {											//CONDICIO DE PERDUA: i es igual a intents-1
 				perdut = true;
 				ninot[passosNinot[cPa][0]][passosNinot[cPa][1]] = parts[cPa][0]; 
