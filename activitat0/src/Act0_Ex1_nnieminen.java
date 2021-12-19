@@ -1,7 +1,6 @@
 import java.util.Scanner;
 
 public class Act0_Ex1_nnieminen {
-
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Introdueix una frase.");
