@@ -16,7 +16,5 @@ public class Act0_Ex2_nnieminen {
 		} else {
 			System.out.println("No es capicua");
 		}
-		
 	}
-
 }
