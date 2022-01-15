@@ -19,5 +19,4 @@ public class Exercici5 {
         }
         return nums; 
     }
-
 }
