@@ -5,7 +5,7 @@ public class Exercici5 {
             System.out.print(resultat[i] + " ");
         }
     }
-
+    //el bubblesort d'un altre activitat
     static int[] ordena(int x, int y, int z) {
         int[] nums = {x,y,z};
         for(int i=0; i<nums.length; i++) {

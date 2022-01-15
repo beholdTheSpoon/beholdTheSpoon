@@ -4,7 +4,7 @@ public class Exercici2 {
     	boolean resultat = esPrimer(31);
 		System.out.println(resultat);
     }
-
+    //fem el procediment d'un activitat anterior de buscar un numero primer
     static boolean esPrimer(int num) {
 		boolean esPrimer = true;
 		int i = 2;	

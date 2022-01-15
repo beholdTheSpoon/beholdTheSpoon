@@ -4,7 +4,8 @@ public class Exercici4 {
         int max = max(85, 23, 17);
         System.out.println(min + " " + max);
     }
-
+    
+    //ordenem els numeros amb bubblesort i agafem el primer i ultim numero per min i max.
     static int min(int x, int y, int z) {
         int[] nums = {x,y,z};
         for(int i=0; i<nums.length; i++) {
