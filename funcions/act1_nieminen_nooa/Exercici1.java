@@ -6,7 +6,7 @@ public class Exercici1 {
 
     static void inici() {
         String resultat;
-        resultat = signe(1);
+        resultat = signe(0);
         System.out.println(resultat);
     }
 
