@@ -1,5 +1,6 @@
 import java.util.Scanner;
 import java.io.File;
+import java.io.FileNotFoundException;
 
 public class UF3Practica1 {
 
@@ -9,13 +10,28 @@ public class UF3Practica1 {
 	}
 	
 	public void inici() {
+		File file = new File("Document.txt");
+		Scanner scanner = new Scanner(System.in);
 		
+		comptarParaulesLinia(file);
 	}
 	
-	public int comptarParaulesLinia() {
-		
+	public int comptarParaulesLinia(File file) {
+		String[] dataNou = null;
+		try {
+			Scanner read = new Scanner(file);
+			while(read.hasNextLine()) {
+				String data = read.nextLine();
+				
+				dataNou = data.split("\r");
+			}
+		} catch (FileNotFoundException e) {
+			System.out.println("error!");
+		}
+
+		return dataNou.length;
 	}
-	
+	/*
 	public int comptarParaulesTotal() {
 		
 	}
@@ -23,5 +39,5 @@ public class UF3Practica1 {
 	public int comptarParaula() {
 		
 	}
-
+*/
 }
