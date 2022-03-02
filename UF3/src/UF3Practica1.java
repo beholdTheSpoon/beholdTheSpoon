@@ -80,7 +80,7 @@ public class UF3Practica1 {
 			String paraula = scanner.next();
 			scanner.close();
 			
-			String paraulaMajuscules = paraula.toUpperCase();
+			String paraulaMajuscules = paraula.toUpperCase();			//
 			System.out.println(paraulaMajuscules);
 			
 			while(read.hasNextLine()) {
@@ -88,7 +88,7 @@ public class UF3Practica1 {
 				String data = read.nextLine();
 				System.out.println(data.replaceAll(paraula, paraulaMajuscules));
 				
-				write.println(data.replaceAll(paraula, paraulaMajuscules));
+				write.println(data.replaceAll(paraula, paraulaMajuscules));		
 			}
 			
 		} catch(Exception e) {
