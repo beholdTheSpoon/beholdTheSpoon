@@ -34,8 +34,8 @@ public class Persona {
 		}
 	}
 	
-	public String mostrar() {
-		return id + "\n" + cognoms + ", " + nom + "\n" + data_naixement + "\n" + adreca + " " + poblacio;
+	public void mostrar() {
+		System.out.println(this.id + "\n" + this.cognoms + ", " + this.nom + "\n" + this.data_naixement + "\n" + this.adreca + " " + this.poblacio);
 	}
 	
 }

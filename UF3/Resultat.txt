@@ -1,6 +1,6 @@
-HOLA que tal
-HOLA HOLA
-adeu HOLA
-hola que tal 3
-hola hola 2
-adeu hola 2
+HOLA que tal 3
+HOLA HOLA 2
+adeu HOLA 2
+
+Numero de vegades paraula hola: 4
+Numero de paraules: 7
